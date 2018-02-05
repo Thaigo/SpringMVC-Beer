@@ -47,7 +47,7 @@
 					<div>
 						
 							<div class="radio  radio-inline">
-								<input type="radio"  class="js-radio-tipo-pessoa"/>
+								<input type="radio"  class="js-radio-tipo-pessoa" data:documento="${tipoPessoa.documento}" data:mascara="${tipoPessoa.mascara}"/>
 									
 									 
 								<label class="control-label" for="tipoPessoa" >Física</label>
@@ -113,7 +113,7 @@
 						</select>
 						
 						<div class="bw-field-action__icon  js-img-loading" style="display: none">
-							<img th:src="@{/images/mini-loading.gif}"/>
+							<img th:src="@{/layout/images/mini-loading.gif}"/>
 						</div>
 					</div>
 				</div>
