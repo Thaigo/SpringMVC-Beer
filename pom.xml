@@ -27,7 +27,7 @@
 		<jcl-over-slf4j.version>1.7.21</jcl-over-slf4j.version>
 		
 		<!-- Thymeleaf -->
-		<thymeleaf.version>3.0.7.RELEASE</thymeleaf.version>
+		<thymeleaf.version>3.0.0.RELEASE</thymeleaf.version>
 		
 		<!-- Spring MVC -->
 		<spring-framework.version>4.3.11.RELEASE</spring-framework.version>
@@ -40,6 +40,9 @@
 		
 		<!-- Thymeleaf - Layout Dialect -->
 		<thymeleaf-layout-dialect.version>2.0.0</thymeleaf-layout-dialect.version>
+		
+		<!-- Thymeleaf extras data attribute -->
+		<thymeleaf-extras-data-attribute.version>2.0.1</thymeleaf-extras-data-attribute.version>
 		
 		<!-- Spring Data JPA -->
 		<spring-data-jpa.version>1.10.2.RELEASE</spring-data-jpa.version>
@@ -160,6 +163,14 @@
 		    <artifactId>spring-data-jpa</artifactId>
 		    <version>${spring-data-jpa.version}</version>
 		    <scope>compile</scope>
+		</dependency>
+		
+		<!-- Thymeleaf extras data attribute -->
+		<dependency>
+    		<groupId>com.github.mxab.thymeleaf.extras</groupId>
+    		<artifactId>thymeleaf-extras-data-attribute</artifactId>
+    		<version>${thymeleaf-extras-data-attribute.version}</version>
+    		<scope>compile</scope>
 		</dependency>
 		
 		
