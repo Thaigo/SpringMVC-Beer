@@ -14,6 +14,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.freitas.beer.model.Cerveja;
 import com.freitas.beer.repository.CervejasRepository;
@@ -21,6 +22,7 @@ import com.freitas.beer.repository.CervejasRepository;
 @Configuration
 @ComponentScan(basePackageClasses = CervejasRepository.class)
 @EnableJpaRepositories(basePackageClasses = CervejasRepository.class, enableDefaultTransactions = false)
+@EnableTransactionManagement
 public class JPAConfig {
 	
 	@Bean
