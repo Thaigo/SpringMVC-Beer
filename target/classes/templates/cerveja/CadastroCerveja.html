@@ -25,10 +25,14 @@
 		</div>
 		
 		<div class="container-fluid">	
+		
+			
 			
 		
 			<form method="POST" th:object="${cerveja}" class="form-vertical  js-form-loading">
-			<brewer:message/>
+			
+			<th:block th:include="fragments/MensagensErroValidacao"></th:block>
+			<th:block th:include="fragments/MensagemSucesso"></th:block>
 	
 			<div class="row">
 				<div class="col-sm-2  form-group bw-required" >
