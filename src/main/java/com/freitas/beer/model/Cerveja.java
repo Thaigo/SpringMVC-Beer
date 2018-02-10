@@ -50,9 +50,11 @@ public class Cerveja {
 	@Column(name = "teor_alcoolico")
 	private BigDecimal teorAlcoolico;
 	
+	@NotNull(message = "A comissao é obrigatoria")
 	@DecimalMax(value = "100.0", message = "O valor da comissão deve ser menor que 100")
 	private BigDecimal comissao;
 	
+	@NotNull(message = "O  Estoque é obrigatorio")
 	@Max(value = 9999, message = "A quantidade em estoque deve ser menor que 9.999")
 	@Column(name = "quantidade_estoque")
 	private Integer quantidadeEstoque;
