@@ -15,6 +15,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import com.freitas.beer.validation.SKU;
+
 @Entity
 @Table(name = "cerveja")
 public class Cerveja {
@@ -23,6 +25,7 @@ public class Cerveja {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
 	
+	@SKU
 	@NotBlank(message = "SKU é obrigatório")
 	private String sku;
 	
