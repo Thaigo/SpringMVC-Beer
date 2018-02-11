@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.freitas.beer.exception.NomeEstiloJaCadastradoException;
 import com.freitas.beer.model.Estilo;
 import com.freitas.beer.repository.EstilosRepository;
 import com.freitas.beer.service.CadastroEstiloService;
@@ -37,7 +38,14 @@ public class EstilosController {
 			return novo(estilo);
 		}
 		
-		cadastroEstiloService.salvar(estilo);
+		
+		try {
+			cadastroEstiloService.salvar(estilo);
+		} catch (NomeEstiloJaCadastradoException e) {
+			result.rejectValue("nome", e.getMessage(), e.getMessage());
+			return novo(estilo);
+		}
+		
 		attributes.addFlashAttribute("mensagem", "Estilo Salvo com sucesso");
 		
 		
