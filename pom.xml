@@ -32,6 +32,9 @@
 		<!-- Spring MVC -->
 		<spring-framework.version>4.3.11.RELEASE</spring-framework.version>
 		
+		<!-- Jackson - JSON -->
+		<jackson-core.version>2.7.5</jackson-core.version>
+		
 		<!-- JPA / Hibernate -->
 		<hibernate.version>5.1.0.Final</hibernate.version>
 		
@@ -171,6 +174,14 @@
     		<artifactId>thymeleaf-extras-data-attribute</artifactId>
     		<version>${thymeleaf-extras-data-attribute.version}</version>
     		<scope>compile</scope>
+		</dependency>
+		
+		<!-- Jackson - JSON -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>${jackson-core.version}</version>
+		    <scope>compile</scope>
 		</dependency>
 		
 		
