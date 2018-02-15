@@ -8,7 +8,7 @@ $(function(){
 	var inputNomeEstilo = $('nomeEstilo');
 	
 	modal.on('shown.bs.modal', onModalShow);
-	modal.on('hide.bs.modal', onModalClose)
+	modal.on('hide.bs.modal', onModalClose);
 	botaoSalvar.on('click', onBotaoSalvarClick);
 	
 	function onModalShow() {
@@ -22,13 +22,13 @@ $(function(){
 	function onBotaoSalvarClick() {
 		var nomeEstilo = inputNomeEstilo.val().trim();
 		$.ajax({
-			url: url,
-			method: 'POST',
-			contentType; 'application/json',
-			data: JSON.stringify({ nome: nomeEstilo}),
+			url : this.url,
+			method : 'POST',
+			contentType : 'application/json',
+			data : JSON.stringify({	nome : nomeEstilo }),			
 			error: onErroSalvandoEstilo
 		});	
-
+		
 	}
 	
 	function onErroSalvandoEstilo() {
